@@ -1,0 +1,19 @@
+tasks: []
+services:
+  - name: rte
+    image: node:16
+    env:
+      &a1 []
+    volumeMounts:
+      &a2 []
+    limits:
+      cpu: 1
+      memory: 2
+  - name: redis
+    image: redis
+    env: *a1
+    volumeMounts: *a2
+    limits:
+      cpu: 1
+      memory: 2
+volumes: []
